@@ -1,0 +1,45 @@
+pxchek0@skullcandy:~$
+pxchek0@skullcandy:~$ sudo sysctl -a | grep core
+[sudo] password for pxchek0:
+kernel.core_pattern = |/usr/share/apport/apport %p %s %c %d %P %E
+kernel.core_pipe_limit = 0
+kernel.core_uses_pid = 0
+net.core.bpf_jit_enable = 1
+net.core.bpf_jit_harden = 0
+net.core.bpf_jit_kallsyms = 1
+net.core.bpf_jit_limit = 264241152
+net.core.busy_poll = 0
+net.core.busy_read = 0
+net.core.default_qdisc = fq_codel
+net.core.dev_weight = 64
+net.core.dev_weight_rx_bias = 1
+net.core.dev_weight_tx_bias = 1
+net.core.devconf_inherit_init_net = 0
+net.core.fb_tunnels_only_for_init_net = 0
+net.core.flow_limit_cpu_bitmap = 00
+net.core.flow_limit_table_len = 4096
+net.core.gro_normal_batch = 8
+net.core.high_order_alloc_disable = 0
+net.core.max_skb_frags = 17
+net.core.message_burst = 10
+net.core.message_cost = 5
+net.core.netdev_budget = 300
+net.core.netdev_budget_usecs = 8000
+net.core.netdev_max_backlog = 1000
+net.core.netdev_rss_key = cc:9b:0b:e4:b0:8d:c2:dc:0a:99:f2:80:1f:85:16:97:ae:7a:c5:53:18:dd:77:07:89:b6:06:13:4f:d4:82:b4:d5:21:ab:83:32:c0:d9:42:6a:9d:e3:51:67:ee:36:f8:71:0a:84:a6
+net.core.netdev_tstamp_prequeue = 1
+net.core.netdev_unregister_timeout_secs = 10
+net.core.optmem_max = 20480
+net.core.rmem_default = 212992
+net.core.rmem_max = 212992
+net.core.rps_sock_flow_entries = 0
+net.core.somaxconn = 4096
+net.core.tstamp_allow_data = 1
+net.core.warnings = 0
+net.core.wmem_default = 212992
+net.core.wmem_max = 212992
+net.core.xfrm_acq_expires = 30
+net.core.xfrm_aevent_etime = 10
+net.core.xfrm_aevent_rseqth = 2
+net.core.xfrm_larval_drop = 1
+pxchek0@skullcandy:~$
