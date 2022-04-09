@@ -1,0 +1,242 @@
+# VM options: -server -Xms2048m -Xmx2048m
+# Warmup: 100 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: optjava.SortBenchmark.classicSort
+
+# Run progress: 0.00% complete, ETA 00:01:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 16464723.227 ops/s
+# Warmup Iteration   2: 43009959.824 ops/s
+# Warmup Iteration   3: 65715689.380 ops/s
+# Warmup Iteration   4: 63358571.433 ops/s
+# Warmup Iteration   5: 67781274.495 ops/s
+# Warmup Iteration   6: 61402049.771 ops/s
+# Warmup Iteration   7: 67785837.142 ops/s
+# Warmup Iteration   8: 66652229.730 ops/s
+# Warmup Iteration   9: 58585001.667 ops/s
+# Warmup Iteration  10: 67800249.684 ops/s
+# Warmup Iteration  11: 68107518.865 ops/s
+# Warmup Iteration  12: 66495172.620 ops/s
+# Warmup Iteration  13: 66666167.068 ops/s
+# Warmup Iteration  14: 51230007.271 ops/s
+# Warmup Iteration  15: 62664923.413 ops/s
+# Warmup Iteration  16: 60638053.190 ops/s
+# Warmup Iteration  17: 63031549.527 ops/s
+# Warmup Iteration  18: 63790371.474 ops/s
+# Warmup Iteration  19: 65515309.300 ops/s
+# Warmup Iteration  20: 65045188.870 ops/s
+# Warmup Iteration  21: 64328472.111 ops/s
+# Warmup Iteration  22: 64181632.875 ops/s
+# Warmup Iteration  23: 67043846.397 ops/s
+# Warmup Iteration  24: 66044850.632 ops/s
+# Warmup Iteration  25: 67101391.906 ops/s
+# Warmup Iteration  26: 67043761.533 ops/s
+# Warmup Iteration  27: 70262745.095 ops/s
+# Warmup Iteration  28: 71305714.549 ops/s
+# Warmup Iteration  29: 70532297.224 ops/s
+# Warmup Iteration  30: 71627086.820 ops/s
+# Warmup Iteration  31: 69858021.523 ops/s
+# Warmup Iteration  32: 69297457.454 ops/s
+# Warmup Iteration  33: 67381261.304 ops/s
+# Warmup Iteration  34: 64864337.762 ops/s
+# Warmup Iteration  35: 66423288.636 ops/s
+# Warmup Iteration  36: 70221447.601 ops/s
+# Warmup Iteration  37: 65512426.851 ops/s
+# Warmup Iteration  38: 61002186.551 ops/s
+# Warmup Iteration  39: 69507862.990 ops/s
+# Warmup Iteration  40: 68020071.687 ops/s
+# Warmup Iteration  41: 65520848.852 ops/s
+# Warmup Iteration  42: 69773707.484 ops/s
+# Warmup Iteration  43: 72881194.174 ops/s
+# Warmup Iteration  44: 72573763.174 ops/s
+# Warmup Iteration  45: 74310008.762 ops/s
+# Warmup Iteration  46: 70463457.016 ops/s
+# Warmup Iteration  47: 72412638.372 ops/s
+# Warmup Iteration  48: 72580845.107 ops/s
+# Warmup Iteration  49: 71846524.639 ops/s
+# Warmup Iteration  50: 73307781.878 ops/s
+# Warmup Iteration  51: 71702675.344 ops/s
+# Warmup Iteration  52: 72080516.766 ops/s
+# Warmup Iteration  53: 73521913.565 ops/s
+# Warmup Iteration  54: 73872130.027 ops/s
+# Warmup Iteration  55: 67645062.703 ops/s
+# Warmup Iteration  56: 68016221.054 ops/s
+# Warmup Iteration  57: 67992602.755 ops/s
+# Warmup Iteration  58: 64476990.977 ops/s
+# Warmup Iteration  59: 66423957.691 ops/s
+# Warmup Iteration  60: 67982496.886 ops/s
+# Warmup Iteration  61: 65111016.196 ops/s
+# Warmup Iteration  62: 64340757.838 ops/s
+# Warmup Iteration  63: 68187016.848 ops/s
+# Warmup Iteration  64: 67014892.167 ops/s
+# Warmup Iteration  65: 69595131.980 ops/s
+# Warmup Iteration  66: 70063781.715 ops/s
+# Warmup Iteration  67: 71106908.074 ops/s
+# Warmup Iteration  68: 70243971.571 ops/s
+# Warmup Iteration  69: 69701507.441 ops/s
+# Warmup Iteration  70: 68811540.117 ops/s
+# Warmup Iteration  71: 68186973.728 ops/s
+# Warmup Iteration  72: 65864450.194 ops/s
+# Warmup Iteration  73: 69633030.011 ops/s
+# Warmup Iteration  74: 69751403.100 ops/s
+# Warmup Iteration  75: 70046338.421 ops/s
+# Warmup Iteration  76: 68474283.399 ops/s
+# Warmup Iteration  77: 69112221.828 ops/s
+# Warmup Iteration  78: 68657914.750 ops/s
+# Warmup Iteration  79: 69631332.768 ops/s
+# Warmup Iteration  80: 69519422.655 ops/s
+# Warmup Iteration  81: 67715518.764 ops/s
+# Warmup Iteration  82: 66914987.364 ops/s
+# Warmup Iteration  83: 63871196.799 ops/s
+# Warmup Iteration  84: 64468374.195 ops/s
+# Warmup Iteration  85: 67529385.712 ops/s
+# Warmup Iteration  86: 66829332.912 ops/s
+# Warmup Iteration  87: 65848213.051 ops/s
+# Warmup Iteration  88: 66731080.657 ops/s
+# Warmup Iteration  89: 68224490.153 ops/s
+# Warmup Iteration  90: 67980354.265 ops/s
+# Warmup Iteration  91: 68805965.233 ops/s
+# Warmup Iteration  92: 69440786.623 ops/s
+# Warmup Iteration  93: 67752236.261 ops/s
+# Warmup Iteration  94: 68490879.208 ops/s
+# Warmup Iteration  95: 68903223.490 ops/s
+# Warmup Iteration  96: 70401129.391 ops/s
+# Warmup Iteration  97: 70252413.274 ops/s
+# Warmup Iteration  98: 71087021.235 ops/s
+# Warmup Iteration  99: 71115924.359 ops/s
+# Warmup Iteration 100: 71412463.333 ops/s
+Iteration   1: 69345995.888 ops/s
+                 ·gc.alloc.rate:               2643.530 MB/sec
+                 ·gc.alloc.rate.norm:          40.000 B/op
+                 ·gc.churn.G1_Eden_Space:      2446.398 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 37.017 B/op
+                 ·gc.count:                    2.000 counts
+                 ·gc.time:                     2.000 ms
+                 ·stack:                       <delayed till summary>
+
+Iteration   2: 70435290.189 ops/s
+                 ·gc.alloc.rate:               2685.104 MB/sec
+                 ·gc.alloc.rate.norm:          40.000 B/op
+                 ·gc.churn.G1_Eden_Space:      2440.461 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 36.356 B/op
+                 ·gc.churn.G1_Old_Gen:         0.012 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    ≈ 10⁻⁴ B/op
+                 ·gc.count:                    2.000 counts
+                 ·gc.time:                     3.000 ms
+                 ·stack:                       <delayed till summary>
+
+Iteration   3: 70337940.891 ops/s
+                 ·gc.alloc.rate:               2681.991 MB/sec
+                 ·gc.alloc.rate.norm:          40.000 B/op
+                 ·gc.churn.G1_Eden_Space:      2451.623 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 36.564 B/op
+                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    ≈ 10⁻⁵ B/op
+                 ·gc.count:                    2.000 counts
+                 ·gc.time:                     2.000 ms
+                 ·stack:                       <delayed till summary>
+
+Iteration   4: 67944975.840 ops/s
+                 ·gc.alloc.rate:               2590.520 MB/sec
+                 ·gc.alloc.rate.norm:          40.000 B/op
+                 ·gc.churn.G1_Eden_Space:      2452.114 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 37.863 B/op
+                 ·gc.churn.G1_Old_Gen:         0.002 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    ≈ 10⁻⁵ B/op
+                 ·gc.count:                    2.000 counts
+                 ·gc.time:                     3.000 ms
+                 ·stack:                       <delayed till summary>
+
+Iteration   5: 66603277.777 ops/s
+                 ·gc.alloc.rate:               2538.467 MB/sec
+                 ·gc.alloc.rate.norm:          40.000 B/op
+                 ·gc.churn.G1_Eden_Space:      2449.524 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 38.598 B/op
+                 ·gc.count:                    2.000 counts
+                 ·gc.time:                     3.000 ms
+                 ·stack:                       <delayed till summary>
+
+
+
+Result "classicSort":
+  68933496.117 ±(99.9%) 6328746.347 ops/s [Average]
+  (min, avg, max) = (66603277.777, 68933496.117, 70435290.189), stdev = 1643555.328
+  CI (99.9%): [62604749.770, 75262242.464] (assumes normal distribution)
+
+Secondary result "·gc.alloc.rate":
+  2627.923 ±(99.9%) 242.301 MB/sec [Average]
+  (min, avg, max) = (2538.467, 2627.923, 2685.104), stdev = 62.925
+  CI (99.9%): [2385.622, 2870.223] (assumes normal distribution)
+
+Secondary result "·gc.alloc.rate.norm":
+  40.000 ±(99.9%) 0.001 B/op [Average]
+  (min, avg, max) = (40.000, 40.000, 40.000), stdev = 0.001
+  CI (99.9%): [40.000, 40.000] (assumes normal distribution)
+
+Secondary result "·gc.churn.G1_Eden_Space":
+  2448.024 ±(99.9%) 18.444 MB/sec [Average]
+  (min, avg, max) = (2440.461, 2448.024, 2452.114), stdev = 4.790
+  CI (99.9%): [2429.580, 2466.468] (assumes normal distribution)
+
+Secondary result "·gc.churn.G1_Eden_Space.norm":
+  37.280 ±(99.9%) 3.609 B/op [Average]
+  (min, avg, max) = (36.356, 37.280, 38.598), stdev = 0.937
+  CI (99.9%): [33.670, 40.889] (assumes normal distribution)
+
+Secondary result "·gc.churn.G1_Old_Gen":
+  0.003 ±(99.9%) 0.019 MB/sec [Average]
+  (min, avg, max) = (≈ 0, 0.003, 0.012), stdev = 0.005
+  CI (99.9%): [≈ 0, 0.022] (assumes normal distribution)
+
+Secondary result "·gc.churn.G1_Old_Gen.norm":
+  ≈ 10⁻⁴ B/op
+
+Secondary result "·gc.count":
+  10.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (2.000, 2.000, 2.000), stdev = 0.001
+  CI (99.9%): [10.000, 10.000] (assumes normal distribution)
+
+Secondary result "·gc.time":
+  13.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (2.000, 2.600, 3.000), stdev = 0.548
+  CI (99.9%): [13.000, 13.000] (assumes normal distribution)
+
+Secondary result "·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 50.0%         RUNNABLE
+ 50.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 48.7%  97.5% optjava.generated.SortBenchmark_classicSort_jmhTest.classicSort_thrpt_jmhStub
+  0.6%   1.1% java.util.Arrays.copyOf
+  0.2%   0.5% optjava.SortBenchmark.classicSort
+  0.1%   0.2% java.util.concurrent.ThreadPoolExecutor$Worker.lock
+  0.1%   0.2% java.util.concurrent.ThreadPoolExecutor$Worker.tryRelease
+  0.1%   0.2% java.util.concurrent.locks.AbstractQueuedSynchronizer.isOnSyncQueue
+  0.1%   0.2% jdk.internal.misc.Unsafe.unpark
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 50.0% 100.0% java.lang.Object.wait
+
+
+
+# Run complete. Total time: 00:01:46
+
+Benchmark                                                Mode  Cnt         Score         Error   Units
+SortBenchmark.classicSort                               thrpt    5  68933496.117 ± 6328746.347   ops/s
+SortBenchmark.classicSort:·gc.alloc.rate                thrpt    5      2627.923 ±     242.301  MB/sec
+SortBenchmark.classicSort:·gc.alloc.rate.norm           thrpt    5        40.000 ±       0.001    B/op
+SortBenchmark.classicSort:·gc.churn.G1_Eden_Space       thrpt    5      2448.024 ±      18.444  MB/sec
+SortBenchmark.classicSort:·gc.churn.G1_Eden_Space.norm  thrpt    5        37.280 ±       3.609    B/op
+SortBenchmark.classicSort:·gc.churn.G1_Old_Gen          thrpt    5         0.003 ±       0.019  MB/sec
+SortBenchmark.classicSort:·gc.churn.G1_Old_Gen.norm     thrpt    5        ≈ 10⁻⁴                  B/op
+SortBenchmark.classicSort:·gc.count                     thrpt    5        10.000                counts
+SortBenchmark.classicSort:·gc.time                      thrpt    5        13.000                    ms
+SortBenchmark.classicSort:·stack                        thrpt                NaN                   ---
+
+Process finished with exit code 0
