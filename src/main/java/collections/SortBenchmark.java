@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)
@@ -45,6 +46,21 @@ public class SortBenchmark {
         List<Integer> copy = new ArrayList<>(testData);
         Collections.sort(copy);
         return copy;
+    }
+
+    @Benchmark
+    public List<Integer> standardSort() {
+        return testData.stream()
+                .sorted()
+                .collect(Collectors.toList());
+    }
+
+    @Benchmark
+    public List<Integer> parallelSort() {
+        return testData
+                .parallelStream()
+                .sorted()
+                .collect(Collectors.toList());
     }
 
     public static void main(String[] args) throws RunnerException {
