@@ -1,4 +1,4 @@
-package performance;
+package collections;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @OutputTimeUnit(TimeUnit.SECONDS)
 @Fork(1)
-public class CollectionsSortBenchMark {
+public class SortBenchmark {
     private static final int N = 1_000;
     private static final List<Integer> testData = new ArrayList<>();
 
@@ -36,6 +36,7 @@ public class CollectionsSortBenchMark {
         Random randomGenerator = new Random();
         for(int i = 1; i <N;  i++) {
             testData.add(randomGenerator.nextInt(Integer.MAX_VALUE));
+            System.out.println("Setup Complete.");
         }
     }
 
@@ -49,7 +50,7 @@ public class CollectionsSortBenchMark {
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
                 .include(SortBenchmark.class.getSimpleName())
-                .warmupIterations(100)
+                .warmupIterations(5)
                 .measurementIterations(5)
                 .forks(1)
                 .jvmArgs("-server", "-Xms2048m", "-Xmx2048m")
