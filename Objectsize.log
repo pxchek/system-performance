@@ -1,0 +1,133 @@
+`[INFO] Reactor Summary:
+[INFO]
+[INFO] Java Object Layout: Parent ......................... SUCCESS [  0.312 s]
+[INFO] Java Object Layout: Core ........................... SUCCESS [05:10 min]
+[INFO] Java Object Layout: Commmand Line Interface ........ SUCCESS [  4.658 s]
+[INFO] Java Object Layout: Samples ........................ SUCCESS [  4.273 s]
+[INFO] Java Object Layout: Benchmarks ..................... SUCCESS [  9.810 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 05:29 min
+[INFO] Finished at: 2022-08-20T15:43:40-05:00
+[INFO] Final Memory: 31M/1024M
+[INFO] ------------------------------------------------------------------------
+➜  jol git:(master) ✗ ls
+LICENSE        README.md      THIRD-PARTY    jol-benchmarks jol-cli        jol-core       jol-samples    pom.xml        src
+➜  jol git:(master) ✗ ls -l
+total 80
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users  19274 Aug 20 15:38 LICENSE
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users   7757 Aug 20 15:38 README.md
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users   1251 Aug 20 15:38 THIRD-PARTY
+drwxr-xr-x   5 ypxc026  CAMPUS\Domain Users    160 Aug 20 15:43 jol-benchmarks
+drwxr-xr-x   7 ypxc026  CAMPUS\Domain Users    224 Aug 20 15:43 jol-cli
+drwxr-xr-x  10 ypxc026  CAMPUS\Domain Users    320 Aug 20 15:38 jol-core
+drwxr-xr-x   7 ypxc026  CAMPUS\Domain Users    224 Aug 20 15:43 jol-samples
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users   4762 Aug 20 15:38 pom.xml
+drwxr-xr-x   3 ypxc026  CAMPUS\Domain Users     96 Aug 20 15:38 src
+➜  jol git:(master) ✗ ca jol-c
+zsh: command not found: ca
+➜  jol git:(master) ✗ cd jol-core
+➜  jol-core git:(master) ✗ ls
+LICENSE     THIRD-PARTY out1.class  out2.class  out3.class  pom.xml     src         target
+➜  jol-core git:(master) ✗ cd target
+➜  target git:(master) ✗ ls -l
+total 1664
+drwxr-xr-x  26 ypxc026  CAMPUS\Domain Users     832 Aug 20 15:43 apidocs
+drwxr-xr-x   5 ypxc026  CAMPUS\Domain Users     160 Aug 20 15:38 classes
+drwxr-xr-x   3 ypxc026  CAMPUS\Domain Users      96 Aug 20 15:38 generated-sources
+drwxr-xr-x   3 ypxc026  CAMPUS\Domain Users      96 Aug 20 15:38 generated-test-sources
+drwxr-xr-x   4 ypxc026  CAMPUS\Domain Users     128 Aug 20 15:43 javadoc-bundle-options
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users  619786 Aug 20 15:43 jol-core-0.17-SNAPSHOT-javadoc.jar
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users  103507 Aug 20 15:43 jol-core-0.17-SNAPSHOT-sources.jar
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users  119411 Aug 20 15:43 jol-core-0.17-SNAPSHOT.jar
+drwxr-xr-x   3 ypxc026  CAMPUS\Domain Users      96 Aug 20 15:43 maven-archiver
+drwxr-xr-x   3 ypxc026  CAMPUS\Domain Users      96 Aug 20 15:38 maven-status
+drwxr-xr-x  41 ypxc026  CAMPUS\Domain Users    1312 Aug 20 15:38 surefire-reports
+drwxr-xr-x   3 ypxc026  CAMPUS\Domain Users      96 Aug 20 15:38 test-classes
+➜  target git:(master) ✗ $ java -jar  internals java.util.HashMap
+zsh: command not found: $
+➜  target git:(master) ✗ ava -jar  internals java.util.HashMap
+zsh: command not found: ava
+➜  target git:(master) ✗ java -jar  internals java.util.HashMap
+Error: Unable to access jarfile internals
+➜  target git:(master) ✗ cd ..
+➜  jol-core git:(master) ✗ cd ..
+➜  jol git:(master) ✗ ls -l
+total 80
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users  19274 Aug 20 15:38 LICENSE
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users   7757 Aug 20 15:38 README.md
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users   1251 Aug 20 15:38 THIRD-PARTY
+drwxr-xr-x   5 ypxc026  CAMPUS\Domain Users    160 Aug 20 15:43 jol-benchmarks
+drwxr-xr-x   7 ypxc026  CAMPUS\Domain Users    224 Aug 20 15:43 jol-cli
+drwxr-xr-x  10 ypxc026  CAMPUS\Domain Users    320 Aug 20 15:38 jol-core
+drwxr-xr-x   7 ypxc026  CAMPUS\Domain Users    224 Aug 20 15:43 jol-samples
+-rw-r--r--   1 ypxc026  CAMPUS\Domain Users   4762 Aug 20 15:38 pom.xml
+drwxr-xr-x   3 ypxc026  CAMPUS\Domain Users     96 Aug 20 15:38 src
+➜  jol git:(master) ✗ java -jar jol-cli/target/jol-cli.jar internals java.util.HashMap
+# WARNING: Unable to attach Serviceability Agent. You can try again with escalated privileges. Two options: a) use -Djol.tryWithSudo=true to try with sudo; b) echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+# Running 64-bit HotSpot VM.
+# Using compressed oop with 3-bit shift.
+# Using compressed klass with 3-bit shift.
+# WARNING | Compressed references base/shifts are guessed by the experiment!
+# WARNING | Therefore, computed addresses are just guesses, and ARE NOT RELIABLE.
+# WARNING | Make sure to attach Serviceability Agent to get the reliable addresses.
+# Objects are 8 bytes aligned.
+#                       ref, bool, byte, char, shrt,  int,  flt,  lng,  dbl
+# Field sizes:            4,    1,    1,    2,    2,    4,    4,    8,    8
+# Array element sizes:    4,    1,    1,    2,    2,    4,    4,    8,    8
+# Array base offsets:    16,   16,   16,   16,   16,   16,   16,   16,   16
+
+Instantiated the sample instance via default constructor.
+
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jol.util.ObjectUtils (file:/Users/ypxc026/Documents/jol/jol-cli/target/jol-cli.jar) to field java.util.AbstractMap.keySet
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jol.util.ObjectUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java.util.HashMap object internals:
+OFF  SZ                       TYPE DESCRIPTION               VALUE
+  0   8                            (object header: mark)     0x0000000000000005 (biasable; age: 0)
+  8   4                            (object header: class)    0x00019868
+ 12   4              java.util.Set AbstractMap.keySet        null
+ 16   4       java.util.Collection AbstractMap.values        null
+ 20   4                        int HashMap.size              0
+ 24   4                        int HashMap.modCount          0
+ 28   4                        int HashMap.threshold         0
+ 32   4                      float HashMap.loadFactor        0.75
+ 36   4   java.util.HashMap.Node[] HashMap.table             null
+ 40   4              java.util.Set HashMap.entrySet          null
+ 44   4                            (object alignment gap)
+Instance size: 48 bytes
+Space losses: 0 bytes internal + 4 bytes external = 4 bytes total
+
+➜  jol git:(master) ✗ java -jar jol-cli/target/jol-cli.jar internals java.lang.String
+# WARNING: Unable to attach Serviceability Agent. You can try again with escalated privileges. Two options: a) use -Djol.tryWithSudo=true to try with sudo; b) echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+# Running 64-bit HotSpot VM.
+# Using compressed oop with 3-bit shift.
+# Using compressed klass with 3-bit shift.
+# WARNING | Compressed references base/shifts are guessed by the experiment!
+# WARNING | Therefore, computed addresses are just guesses, and ARE NOT RELIABLE.
+# WARNING | Make sure to attach Serviceability Agent to get the reliable addresses.
+# Objects are 8 bytes aligned.
+#                       ref, bool, byte, char, shrt,  int,  flt,  lng,  dbl
+# Field sizes:            4,    1,    1,    2,    2,    4,    4,    8,    8
+# Array element sizes:    4,    1,    1,    2,    2,    4,    4,    8,    8
+# Array base offsets:    16,   16,   16,   16,   16,   16,   16,   16,   16
+
+Instantiated the sample instance via default constructor.
+
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jol.util.ObjectUtils (file:/Users/ypxc026/Documents/jol/jol-cli/target/jol-cli.jar) to field java.lang.String.value
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jol.util.ObjectUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java.lang.String object internals:
+OFF  SZ     TYPE DESCRIPTION               VALUE
+  0   8          (object header: mark)     0x0000000000000005 (biasable; age: 0)
+  8   4          (object header: class)    0x00001808
+ 12   4   byte[] String.value              []
+ 16   4      int String.hash               0
+ 20   1     byte String.coder              0
+ 21   3          (object alignment gap)
+Instance size: 24 bytes
