@@ -30,37 +30,55 @@ import java.util.stream.Collectors;
 @OutputTimeUnit(TimeUnit.SECONDS)
 @Fork(1)
 public class SortBenchmark {
-    private static final int N = 1_000;
-    private static final List<Integer> testData = new ArrayList<>();
+//    private static final int N = 1_000;
+//    private static final List<Integer> testData = new ArrayList<>();
+//
+//    public static final void setup() {
+//        Random randomGenerator = new Random();
+//        for(int i = 1; i <N;  i++) {
+//            testData.add(randomGenerator.nextInt(Integer.MAX_VALUE));
+//            System.out.println("Setup Complete.");
+//        }
+//    }
+//
+//    @Benchmark
+//    public List<Integer> classicSort() {
+//        List<Integer> copy = new ArrayList<>(testData);
+//        Collections.sort(copy);
+//        return copy;
+//    }
+//
+//    @Benchmark
+//    public List<Integer> standardSort() {
+//        return testData.stream()
+//                .sorted()
+//                .collect(Collectors.toList());
+//    }
+//
+//    @Benchmark
+//    public List<Integer> parallelSort() {
+//        return testData
+//                .parallelStream()
+//                .sorted()
+//                .collect(Collectors.toList());
+//    }
 
-    public static final void setup() {
-        Random randomGenerator = new Random();
-        for(int i = 1; i <N;  i++) {
-            testData.add(randomGenerator.nextInt(Integer.MAX_VALUE));
-            System.out.println("Setup Complete.");
+    @Benchmark
+    public List<String> properlySizedArrayList() {
+        List<String> list = new ArrayList<>(1_000_000);
+        for (int i = 0; i < 1_000_000; i++) {
+            list.add(String.valueOf(0));
         }
+        return list;
     }
 
     @Benchmark
-    public List<Integer> classicSort() {
-        List<Integer> copy = new ArrayList<>(testData);
-        Collections.sort(copy);
-        return copy;
-    }
-
-    @Benchmark
-    public List<Integer> standardSort() {
-        return testData.stream()
-                .sorted()
-                .collect(Collectors.toList());
-    }
-
-    @Benchmark
-    public List<Integer> parallelSort() {
-        return testData
-                .parallelStream()
-                .sorted()
-                .collect(Collectors.toList());
+    public List<String> resizingArrayList() {
+        List<String> list = new ArrayList<>(1_000_000);
+        for (int i = 0; i < 1_000_000; i++) {
+            list.add(String.valueOf(0));
+        }
+        return list;
     }
 
     public static void main(String[] args) throws RunnerException {
