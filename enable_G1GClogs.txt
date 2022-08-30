@@ -1,0 +1,3 @@
+Enable G1GC logging for Java 11
+
+jcmd pid VM.log output="file=gc.log" output_options="filecount=10,filesize=250m" what="gc*=info" decorators="time,level"
