@@ -1,1 +1,3 @@
+1. Memory consumption per thread ~ 1 MB.
 
+2. Context switch between threads ~ 1-2 microseconds per switch.
