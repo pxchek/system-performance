@@ -1,0 +1,30 @@
+/**
+ * Garbage collection algorithm.
+ * 1. App creates objects and memory is allocated for objects in real-time on the Eden space of the JVM heap.
+ * 
+ * 2. Eden space is full,
+ *      a. Assuming Survivor Space Zero (S0) is the initial target space.
+ *      b. Copy all the live objects from Eden space to S0.
+ *      c. Set the age of the object == 1
+ *      d. Examine the live objects on the Survivor Space One (S1)
+ *          -> If the threshold age <= age of the object + 1 ?
+ *          -> Yes, Copy object to the old generation space
+ *          -> No, Copy object to S0 and age+=1
+ *      e. Reclaim the Eden and S1 space
+ *      f. Allocate the object in Eden space.
+ *      g. Now, S1 is the target survivor space
+ *      h. Copy live objects from Eden into S1
+ *      i. Set the age of the object == 1
+ *      j. Examine the live objects in S0
+ *       -> If the threshold age <= age of the object + 1 ?
+ *            -> Yes, Copy object to the old generation space
+ *            -> No, Copy object to S1 and age+=1
+ *      e. Reclaim the Eden and S0 space
+ *      f. Allocate the object in Eden space.
+ *      
+ * 3. Old generation is full, also called tenured space,
+ *      a. Major garbage collector runs
+ *      b. Manages to work without stop-the-world (suspending application threads) ? NO. Pauses are much shorter.
+ *      c. Application threads don't need to be paused most of the time, however if the G1 GC cannot free
+ *         up enough memory and the application is allocating more than that can be freed up, application threads are paused.
+ */
