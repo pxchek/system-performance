@@ -1,0 +1,55 @@
+*******************************
+Application cache utilization
+*******************************
+
+What is cache overhead ? Talking to and manipulating the cache takes time when the request has to first check the cache for the entry
+and in the event the entry is missing must call the service and add the result to the cache which results in an cache overhead.
+
+Total time a request takes to process as a result of a cache miss.
+
+********************************************************************
+Request_Time = Cache_Check + Service_Call_Time + Cache_Write
+********************************************************************
+
+E.g Cache check time is 100 ms, service call time is 300 ms, cache write is 50 ms
+Request_Time = 100 ms + 300 ms + 50 ms = 450 ms to process the request for a cache miss.
+
+Total time is greater than the time it takes for the service to process the request if there was no cache (300ms). The
+additional 150 ms is cache overhead.
+
+Total time a request takes to process as a result of a cache hit.
+Request_Time = Cache_Check = 100 ms following the same numbers as the above scenario.
+
+So, Cache miss == 450 ms > No cache == 300 ms > Cache hit == 100 ms.
+
+In order for a cache to be effective, the overall time for all the requests must be less than the overall time if the cache didn't 
+exist. The greater the number of cache hits compared with the cache misses, the more effective the cache. Additionally, the greater
+the service call time compared with the cache overhead, the more effective the cache.
+
+**********************************************
+Cache_Miss_Rate + Cache_Hit_Rate = 1 (100%)
+**********************************************
+
+THE TOTAL REQUEST TIME WITHOUT A CACHE MUST BE GREATER THAN THE TOTAL REQUEST TIME WITH A CACHE FOR THE CACHE TO BE CONSIDERED EFFECTIVE.
+
+*******************************************************************************************************************************
+Request_Time_No_Cache >= Request_Time_With_Cache
+
+Request_Time_With_Cache = (Cache_Miss_Rate * Request_Time_Cache_Miss) + (Cache_Hit_Rate * Request_Time_Cache_Hit);
+
+Request_Time_With_Cache = (Cache_Miss_Rate * Request_Time_Cache_Miss) + ((1 - Cache_Miss_Rate) * Request_Time_Cache_Hit);
+
+Request_Time_No_Cache >= (Cache_Miss_Rate * Request_Time_Cache_Miss) + ((1 - Cache_Miss_Rate) * Request_Time_Cache_Hit);
+*******************************************************************************************************************************
+
+300 ms >= (Cache_Miss_Rate * 450 ms) + ((1 - Cache_Miss_Rate) * 100 ms)
+300 ms >= (Cache_Misss_Rate * 450 ms) + ((1 * 100 ms) - (Cache_Miss_Rate * 100 ms))
+300 ms >= (Cache_Miss_Rate * 450 ms) + 100 ms - (Cache_Miss_Rate * 100 ms)
+300 ms >= 100 ms + Cache_Miss_Rate (450 ms - 100 ms)
+300 ms >= Cache_Miss_Rate * 350 ms
+Cache_Miss_Rate <= 300/350
+Cache_Miss_Rate <= 85.7 %
+Cache_Hit_Rate  >= 14.3 %
+
+As long as a request observes a cache miss less than or equal to 85.7 % or cache hit greater than or equal to 14.3%, then having the
+cache is more efficient than not having the cache.
