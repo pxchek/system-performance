@@ -1,12 +1,10 @@
 *******************************
 Application cache utilization
 *******************************
-
 What is cache overhead ? Talking to and manipulating the cache takes time when the request has to first check the cache for the entry
 and in the event the entry is missing must call the service and add the result to the cache which results in an cache overhead.
 
 Total time a request takes to process as a result of a cache miss.
-
 ********************************************************************
 Request_Time = Cache_Check + Service_Call_Time + Cache_Write
 ********************************************************************
@@ -31,7 +29,6 @@ Cache_Miss_Rate + Cache_Hit_Rate = 1 (100%)
 **********************************************
 
 THE TOTAL REQUEST TIME WITHOUT A CACHE MUST BE GREATER THAN THE TOTAL REQUEST TIME WITH A CACHE FOR THE CACHE TO BE CONSIDERED EFFECTIVE.
-
 *******************************************************************************************************************************
 Request_Time_No_Cache >= Request_Time_With_Cache
 
