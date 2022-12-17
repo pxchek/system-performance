@@ -17,9 +17,9 @@ b. Application has read data that must be managed after stream readiness notifie
 
 The duality is no longer valid due to readiness selection implemented in the OS Kernel.
 
-OS is instrcuted to observe a group of streams and return some indication of which streams are ready to perform a specific operation such as read or operation such as read and write. This capability lets a thread multiplex large number of active streams by using readiness information provided by the operating system. 
+OS is instructed to observe a group of streams and return some indication of which streams are ready to perform a specific operation such as read or operation such as read and write. This capability lets a thread multiplex large number of active streams by using readiness information provided by the operating system. 
 
 Selector - is an object that maintains a set of channels that it examines to determine which channels are ready for reading, writing however the actual work is delegated to system call.
 
-The ability to check a channel for readiness without having to wait when something isn't ready such as bytes are unavaible for reading and without also having to perform the operation while checking is the key to scalability. A single thread can manage a huge number of channels.
+The ability to check a channel for readiness without having to wait when something isn't ready such as bytes are unavailable for reading and without also having to perform the operation while checking is the key to scalability. A single thread can manage a huge number of channels.
 
