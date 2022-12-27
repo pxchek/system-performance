@@ -1,0 +1,7 @@
+Selector keys: [
+channel=java.nio.channels.SocketChannel[connected local=/10.0.0.38:5000 remote=/10.0.0.100:52970], selector=sun.nio.ch.EPollSelectorImpl@118ceea3, interestOps=4, readyOps=4, 
+channel=java.nio.channels.SocketChannel[connected local=/10.0.0.38:5000 remote=/10.0.0.213:44636], selector=sun.nio.ch.EPollSelectorImpl@118ceea3, interestOps=4, readyOps=4, 
+channel=java.nio.channels.SocketChannel[connected local=/10.0.0.38:5000 remote=/10.0.0.128:42752], selector=sun.nio.ch.EPollSelectorImpl@118ceea3, interestOps=4, readyOps=4, 
+channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:5000 remote=/127.0.0.1:46402], selector=sun.nio.ch.EPollSelectorImpl@118ceea3, interestOps=4, readyOps=4
+]
+
