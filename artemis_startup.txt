@@ -1,0 +1,92 @@
+➜  bin ./artemis 
+usage: artemis <command> [<args>]
+
+The most commonly used artemis commands are:
+    address    Address tools group (create|delete|update|show) (example ./artemis address create)
+    browser    It will browse messages on an instance
+    check      Check tools group (node|queue) (example ./artemis check node)
+    consumer   It will consume messages from an instance
+    create     creates a new broker instance
+    data       data tools group (print|recover) (example ./artemis data print)
+    help       Display help information
+    mask       mask a password and print it out
+    perf       Perf tools group (example ./artemis perf client)
+    producer   It will send messages to an instance
+    queue      Queue tools group (create|delete|update|stat|purge) (example ./artemis queue create)
+    transfer   Moves Messages from one destination towards another destination
+    upgrade    Update an artemis instance to the current artemis.home, keeping all the data and broker.xml. Warning: backup your instance before using this command and compare the files.
+    version    print version information
+
+See 'artemis help <command>' for more information on a specific command.
+
+➜  bin ./artemis create mybroker
+Creating ActiveMQ Artemis instance at: /Users/pxchekoo/Downloads/apache-artemis-2.27.1/bin/mybroker
+
+--user:
+Please provide the default username:
+admin
+
+--password: is mandatory with this configuration:
+Please provide the default password:
+
+
+--allow-anonymous | --require-login:
+Allow anonymous access?, valid values are Y,N,True,False
+Y
+
+Auto tuning journal ...
+done! Your system can make 0.15 writes per millisecond, your journal-buffer-timeout will be 6528000
+
+You can now start the broker by executing:  
+
+   "/Users/pxchek00/Downloads/apache-artemis-2.27.1/bin/mybroker/bin/artemis" run
+
+Or you can run the broker in the background using:
+
+   "/Users/pxchekoo/Downloads/apache-artemis-2.27.1/bin/mybroker/bin/artemis-service" start
+
+➜  bin "/Users/pxchekoo/Downloads/apache-artemis-2.27.1/bin/mybroker/bin/artemis" run
+     _        _               _
+    / \  ____| |_  ___ __  __(_) _____
+   / _ \|  _ \ __|/ _ \  \/  | |/  __/
+  / ___ \ | \/ |_/  __/ |\/| | |\___ \
+ /_/   \_\|   \__\____|_|  |_|_|/___ /
+ Apache ActiveMQ Artemis 2.27.1
+
+
+2022-12-27 15:22:34,217 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server
+2022-12-27 15:22:34,300 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: live Message Broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2022-12-27 15:22:34,337 INFO  [org.apache.activemq.artemis.core.server] AMQ221013: Using NIO Journal
+2022-12-27 15:22:34,416 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 1073741824
+2022-12-27 15:22:34,454 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2022-12-27 15:22:34,455 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2022-12-27 15:22:34,455 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2022-12-27 15:22:34,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2022-12-27 15:22:34,456 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2022-12-27 15:22:34,457 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2022-12-27 15:22:34,501 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain live lock
+2022-12-27 15:22:34,501 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Live Server Obtained live lock
+2022-12-27 15:22:34,676 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2022-12-27 15:22:34,689 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2022-12-27 15:22:34,756 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2022-12-27 15:22:34,757 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2022-12-27 15:22:35,314 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started KQUEUE Acceptor at 0.0.0.0:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2022-12-27 15:22:35,320 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started KQUEUE Acceptor at 0.0.0.0:5445 for protocols [HORNETQ,STOMP]
+2022-12-27 15:22:35,325 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started KQUEUE Acceptor at 0.0.0.0:5672 for protocols [AMQP]
+2022-12-27 15:22:35,330 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started KQUEUE Acceptor at 0.0.0.0:1883 for protocols [MQTT]
+2022-12-27 15:22:35,335 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started KQUEUE Acceptor at 0.0.0.0:61613 for protocols [STOMP]
+2022-12-27 15:22:35,339 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now live
+2022-12-27 15:22:35,340 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.27.1 [0.0.0.0, nodeID=9449068b-862c-11ed-a98f-acde48001122] 
+2022-12-27 15:22:35,351 INFO  [org.apache.activemq.artemis] AMQ241003: Starting embedded web server
+2022-12-27 15:22:35,725 INFO  [org.apache.activemq.hawtio.branding.PluginContextListener] Initialized activemq-branding plugin
+2022-12-27 15:22:35,791 INFO  [org.apache.activemq.hawtio.plugin.PluginContextListener] Initialized artemis-plugin plugin
+2022-12-27 15:22:36,200 INFO  [io.hawt.HawtioContextListener] Initialising hawtio services
+2022-12-27 15:22:36,208 INFO  [io.hawt.system.ConfigManager] Configuration will be discovered via system properties
+2022-12-27 15:22:36,210 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 2.15.0
+2022-12-27 15:22:36,215 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2022-12-27 15:22:36,220 INFO  [io.hawt.web.auth.LoginRedirectFilter] Hawtio loginRedirectFilter is using 1800 sec. HttpSession timeout
+2022-12-27 15:22:36,230 INFO  [io.hawt.web.proxy.ProxyServlet] Proxy servlet is disabled
+2022-12-27 15:22:36,234 INFO  [io.hawt.web.servlets.JolokiaConfiguredAgentServlet] Jolokia overridden property: [key=policyLocation, value=file:/Users/pxchekoo/Downloads/apache-artemis-2.27.1/bin/mybroker/etc/jolokia-access.xml]
+2022-12-27 15:22:36,316 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://localhost:8161
+2022-12-27 15:22:36,316 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://localhost:8161/console/jolokia
+2022-12-27 15:22:36,316 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://localhost:8161/console
