@@ -32,6 +32,12 @@ are asynchronous blocking I/O - Why ? Issues system call and returns immediately
 
 EVERYTHING DISCUSSED ABOVE IS ASYNCHRONOUS BLOCKING I/O
 
-https://man7.org/linux/man-pages/man7/sigevent.7.html handles AIO (Asynchronous I/O) - 
+https://man7.org/linux/man-pages/man7/sigevent.7.html handles AIO (Asynchronous I/O)
 
+It is bad to poll the OS for each IO in progress but instead all the IOs to determine which one is ready.All the above system calls, when the IO is ready the user must then call a read or write to tranfer data.
+
+AIO is similar to epoll in that the OS is instructed to observe and manage to return indication which streams are ready but the major difference is that after poll or epoll informs the user that the resource is ready, the user must then read or write the resource.AIO handles differently in that it informs the user that IO is complete which infers the data or operation has already been complete or read into user's memory.
+
+ASYNCHRONOUS BLOCKING I/O - SELECT(), POLL(), EPOLL()
+ASYNCHRONOUS NON-BLOCKING I/O - POSIX AIO, LINUX IO_*(2)
 
