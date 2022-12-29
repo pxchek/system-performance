@@ -14,7 +14,8 @@ import java.util.Set;
 
 public class TimeServer {
 
-    //epoll() implementation - NON-BLOCKING SYNCHRONOUS I/O.
+    //epoll() implementation - NON-BLOCKING SYNCHRONOUS I/O - The event loop thread is running in non-blocking however the system call itself
+    // is blocking call. Secondly, we perform synchronous I/O.
     private static Selector selector;
 
     static class SelectorHandler implements Runnable {
@@ -24,7 +25,7 @@ public class TimeServer {
             while (true) {
                 try {
                     System.out.println("About to select ...");
-                    int readyChannels = selector.select(500);   // Non-Blocking
+                    int readyChannels = selector.select(500);   // Non-Blocking event loop thread but blocking select operation.
                     if (readyChannels == 0) {
                         System.out.println("No tasks available");
                     } else {
@@ -72,7 +73,7 @@ public class TimeServer {
         System.out.println("Time Server started");
         try {
             ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
-            serverSocketChannel.socket().bind(new InetSocketAddress(5001));
+            serverSocketChannel.socket().bind(new InetSocketAddress(5002));
             selector = Selector.open();
             new Thread(new SelectorHandler()).start();
             while (true) {
