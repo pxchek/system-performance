@@ -24,7 +24,7 @@ public class TimeServer {
             while (true) {
                 try {
                     System.out.println("About to select ...");
-                    int readyChannels = selector.select(500);   // Non-Blocking event loop thread but blocking select operation.
+                    int readyChannels = selector.select(500);   // ASYNCHRONOUS
                     if (readyChannels == 0) {
                         System.out.println("No tasks available");
                     } else {
@@ -52,7 +52,7 @@ public class TimeServer {
                                 SocketChannel socketChannel = null;
                                 while (buffer.hasRemaining()) {
                                     socketChannel = (SocketChannel) key.channel();
-                                    socketChannel.write(buffer);    //Synchronous I/O
+                                    socketChannel.write(buffer);    //BLOCKING I/O
                                 }
                                 System.out.println("Sent: "
                                         + message + " to: " + socketChannel);
