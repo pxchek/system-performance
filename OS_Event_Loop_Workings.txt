@@ -38,6 +38,22 @@ It is bad to poll the OS for each IO in progress but instead all the IOs to dete
 
 AIO is similar to epoll in that the OS is instructed to observe and manage to return indication which streams are ready but the major difference is that after poll or epoll informs the user that the resource is ready, the user must then read or write the resource.AIO handles differently in that it informs the user that IO is complete which infers the data or operation has already been complete or read into user's memory.
 
-NON-BLOCKING SYNCHRONOUS I/O - SELECT(), POLL(), EPOLL()
-NON-BLOCKING ASYNCHRONOUS I/O - POSIX AIO, LINUX IO_*(2)
+Readiness Notification Models
+
+1. Level-Triggered notification: A fd is considered to be ready when it is possible to perform an I/O system call without blocking.
+2. Edge-Triggered notification: Notification is provided if there is I/O activity on the fd since it was last monitored.
+
+select(), poll() - Level-triggered ? Y, Edge Triggered ? N
+signal driven I/O (AIO) - Level-triggered ? N, Edge Triggered ? Y
+epoll() - Level-triggered ? Y, Edge Triggered ? Y
+
+abstract int - select() - Selects a set of keys whose corresponding channels are ready for I/O operations.
+-> Kernel behavior is to set the timeout value as -1, block until an event occurs or block indefinitely.
+abstract int - select(long timeout) - Selects a set of keys whose corresponding channels are ready for I/O operations.
+-> Kernel behavior is to set the value as timeout, block for up to timeout milliseconds until an event occurs or return.
+abstract int - selectNow() - Selects a set of keys whose corresponding channels are ready for I/O operations.
+-> Kernel behavior is set the timeout value as o, perform a non-blocking behvior to see which events are currently available
+on the fds.
+
+
 
