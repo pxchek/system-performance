@@ -14,8 +14,7 @@ import java.util.Set;
 
 public class TimeServer {
 
-    //epoll() implementation - NON-BLOCKING SYNCHRONOUS I/O - The event loop thread is running in non-blocking however the system call itself
-    // is blocking call. Secondly, we perform synchronous I/O.
+    //epoll() implementation - ASYNCHRONOUS BLOCKING I/O
     private static Selector selector;
 
     static class SelectorHandler implements Runnable {
