@@ -52,7 +52,7 @@ abstract int - select() - Selects a set of keys whose corresponding channels are
 abstract int - select(long timeout) - Selects a set of keys whose corresponding channels are ready for I/O operations.
 -> Kernel behavior is to set the value as timeout, block for up to timeout milliseconds until an event occurs or return.
 abstract int - selectNow() - Selects a set of keys whose corresponding channels are ready for I/O operations.
--> Kernel behavior is set the timeout value as o, perform a non-blocking behvior to see which events are currently available
+-> Kernel behavior is set the timeout value as 0, perform a non-blocking behavior to see which events are currently available
 on the fds.
 
 
