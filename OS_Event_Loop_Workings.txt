@@ -12,7 +12,7 @@ This duality prevents seperating the code that checks from stream readiness (Fir
 Result - Non-Blocking mode is the foundation for readiness selection (select() system call) which offloads to the Operating System the work involved in checking for I/O stream readiness to perform read, write and other operations which was mentioned as first event without actually performing the operations. 
 
 E.g - If the non-blocking read operation succeeds, there are two important events with readiness selection
-a. Aplication learns the read operation is possible no longer true and offloaded to the OS to determine if the operation is possible.
+a. Application learns the read operation is possible no longer true and offloaded to the OS to determine if the operation is possible.
 b. Application has read data that must be managed after stream readiness notifies the operation is possible.
 
 The duality is no longer valid due to readiness selection implemented in the OS Kernel.
@@ -45,7 +45,10 @@ Readiness Notification Models
 
 select(), poll() - Level-triggered ? Y, Edge Triggered ? N
 signal driven I/O (AIO) - Level-triggered ? N, Edge Triggered ? Y
-epoll() - Level-triggered ? Y, Edge Triggered ? Y
+epoll() - Level-triggered ? Y, Edge Triggered ? Y (Either but not both)
+
+None of these mechanism actually perform I/O. Instead, once we have determined that a file descriptor is ready, we use the
+traditional I/O system calls to perform I/O
 
 abstract int - select() - Selects a set of keys whose corresponding channels are ready for I/O operations.
 -> Kernel behavior is to set the timeout value as -1, block until an event occurs or block indefinitely.
