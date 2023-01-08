@@ -12,6 +12,9 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * Reactor Pattern.
+ */
 public class TimeServer {
 
     //epoll() implementation - ASYNCHRONOUS BLOCKING I/O
@@ -21,6 +24,7 @@ public class TimeServer {
 
         @Override
         public void run() {
+            //*********EVENT LOOP****************//
             while (true) {
                 try {
                     System.out.println("About to select ...");
@@ -69,6 +73,7 @@ public class TimeServer {
     }
 
     public static void main(String[] args) {
+        //************MAIN THREAD*******************//
         System.out.println("Time Server started");
         try {
             ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
