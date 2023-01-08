@@ -59,4 +59,14 @@ abstract int - selectNow() - Selects a set of keys whose corresponding channels 
 on the fds.
 
 
+----------------------------------------------------------------------
+https://stackoverflow.com/questions/22177722/java-nio-non-blocking-channels-vs-asynchronouschannels
+
+There's your misapprehension, right there. Non-blocking mode is different from asynchronous mode.
+
+A non-blocking operation either transfers data or it doesn't. In either case there is no blocking, and the operation is complete once it returns. This mode is supported by SocketChannel, DatagramSocketChannel, and Selector.
+
+An asynchronous operation starts when you call the method and continues in the background, with the result becoming available at a later time via a callback or a Future. This mode is supported by the AsynchronousSocketChannel etc classes you mention in your question.
+
+
 
